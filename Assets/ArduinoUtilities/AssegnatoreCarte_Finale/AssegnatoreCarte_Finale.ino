@@ -67,7 +67,6 @@ void loop() {
     }
   } else {
     if(isPressed){
-      Serial.println("Released");
       isPressed = false;
     }
   }

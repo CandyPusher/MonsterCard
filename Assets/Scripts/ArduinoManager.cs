@@ -36,6 +36,7 @@ public class ArduinoManager : MonoBehaviour
 
             if (incomingData == "Pressed")
             {
+                GameManager.Instance.gameFlowManager.PlayerInteracted(playerIndex);
                 Debug.Log($"Input: {incomingData}");
                 return;
             }
