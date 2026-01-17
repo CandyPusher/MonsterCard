@@ -1,0 +1,25 @@
+OVDF v1.1
+ArduinoManager, Assembly-CSharp
+MetaGuid:70e7d9f8faa0a594586a98b6a234951a
+
+# $TLAhXi1GS3MyQxciJBnYZg
+Position: $root:13
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Debug"
+	Subtitle = "Debug Methods to call"
+	Alignment = Centered
+	BoldTitle = True
+	HorizontalLine = True
+	Indent = False
+
+# DebugNoArduino(string)
+Position: $TLAhXi1GS3MyQxciJBnYZg:0
+Visibility: Shown
++ [UnityEngine.SpaceAttribute]
+	height = 10
+
+# DebugPressArduino()
+Position: $TLAhXi1GS3MyQxciJBnYZg:1
+Visibility: Shown
++ [UnityEngine.SpaceAttribute]
+	height = 5

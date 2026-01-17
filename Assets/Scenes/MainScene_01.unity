@@ -1874,6 +1874,7 @@ GameObject:
   - component: {fileID: 2123202721}
   - component: {fileID: 2123202723}
   - component: {fileID: 2123202722}
+  - component: {fileID: 2123202724}
   m_Layer: 5
   m_Name: TXT_Center_PressToStart
   m_TagString: Untagged
@@ -1920,7 +1921,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Premi per confermare la selezione
+  m_text: <shake a=0.1>Premi per confermare la selezione<shake>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ab70778dcb52db94d8ac405dbbe7810c, type: 2}
   m_sharedMaterial: {fileID: -8452344788771926957, guid: ab70778dcb52db94d8ac405dbbe7810c, type: 2}
@@ -1947,7 +1948,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 96.45
+  m_fontSize: 88.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1999,6 +2000,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123202720}
   m_CullTransparentMesh: 1
+--- !u!114 &2123202724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123202720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localSettings:
+    isResettingTimeOnNewText: 1
+    defaultEffectsMode: 1
+    timeScale: 0
+    defaultBehaviorTags: []
+    defaultAppearanceTags: []
+    defaultDisappearanceTags: []
+    isAnimatingBehaviors: 1
+    isAnimatingAppearances: 1
+    isAnimatingDisappearances: 1
+    useDynamicScaling: 1
+    referenceFontSize: 12
+  sharedSettings: {fileID: 0}
+  animationLoop: 0
+  databaseEffects: {fileID: 0}
+  styleSheet: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

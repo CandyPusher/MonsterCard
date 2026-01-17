@@ -13,55 +13,8 @@ MonoBehaviour:
   m_Name: vHierarchy Data
   m_EditorClassIdentifier: 
   sceneDatas_byGuid:
-    keys:
-    - 99c9720ab356a0642a771bea13969a05
-    values:
-    - goDatas_byGlobalId:
-        keys:
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-272273315-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-736245456-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1028563613-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-239034090-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1886077601-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1617441409-0
-        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-298978069-0
-        values:
-        - colorIndex: 0
-          iconNameOrGuid: StandaloneInputModule Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: Settings Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: PreMatCylinder
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: Canvas Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: EventSystem Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 2
-          iconNameOrGuid: CanvasGroup Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-        - colorIndex: 0
-          iconNameOrGuid: StandaloneInputModule Icon
-          isIconRecursive: 0
-          isColorRecursive: 0
-  bookmarks:
-  - _go: {fileID: 0}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-736245456-0
-  - _go: {fileID: 0}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-272273315-0
-  - _go: {fileID: 0}
-    globalId:
-      globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-239034090-0
-  bookmarkedScenePaths: []
+    keys: []
+    values: []
+  bookmarks: []
+  bookmarkedScenePaths:
+  - Assets/Scenes/MainScene_01.unity
