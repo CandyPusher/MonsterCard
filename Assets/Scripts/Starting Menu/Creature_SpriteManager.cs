@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Creature_SpriiteManager : MonoBehaviour
+public class Creature_SpriteManager : MonoBehaviour
 {
     public Sprite creature_01;
     public Sprite creature_02;

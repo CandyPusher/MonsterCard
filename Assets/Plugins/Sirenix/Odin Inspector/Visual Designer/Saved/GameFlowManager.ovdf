@@ -1,0 +1,67 @@
+OVDF v1.1
+GameFlowManager, Assembly-CSharp
+MetaGuid:9de0727e53feff949b832f4346549120
+
+# $PSGQXGZs2jErrc8TT4AJTd
+Position: $P7YoZd7Ex9KM8xCNuyrQg8:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute]
+
+# $SuR4y6SKwrsk1dD2QQ2A9v
+Position: $PSGQXGZs2jErrc8TT4AJTd:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $RDrrNeVE6Xp1PvoFUiMgav
+Position: $PSGQXGZs2jErrc8TT4AJTd:1
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $P7YoZd7Ex9KM8xCNuyrQg8
+Position: $root:0
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Player Menu"
+	Alignment = Centered
+	Indent = False
+
+# $Qe6rRcJPVYE4N1FgrqtXQU
+Position: $root
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Game state"
+	Indent = True
+	Alignment = Centered
+
+# player2_Deck
+Position: $RDrrNeVE6Xp1PvoFUiMgav:0
+
+# player1_Deck
+Position: $SuR4y6SKwrsk1dD2QQ2A9v:0
+
+# player1_idCardSelected
+Position: $SuR4y6SKwrsk1dD2QQ2A9v:1
+
+# player2_idCardSelected
+Position: $RDrrNeVE6Xp1PvoFUiMgav:1
+
+# player1_isReady
+Position: $SuR4y6SKwrsk1dD2QQ2A9v:2
+
+# player2_isReady
+Position: $RDrrNeVE6Xp1PvoFUiMgav:2
+
+# player1_Creature
+Position: $SuR4y6SKwrsk1dD2QQ2A9v:3
+
+# player2_Creature
+Position: $RDrrNeVE6Xp1PvoFUiMgav:3
+
+# player1Banner
+Position: $SuR4y6SKwrsk1dD2QQ2A9v:4
+
+# player2Banner
+Position: $RDrrNeVE6Xp1PvoFUiMgav:4
+
+# gameState
+Position: $Qe6rRcJPVYE4N1FgrqtXQU:0
+Visibility: Shown
++ [Sirenix.OdinInspector.InfoBoxAttribute]
+	Message = "Current GameStat of the game"
+	GUIAlwaysEnabled = False
+	IconColor = ""

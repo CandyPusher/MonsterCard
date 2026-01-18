@@ -1,0 +1,52 @@
+OVDF v1.1
+Creature_SpriiteManager, Assembly-CSharp
+MetaGuid:beb59cdd071b92149813bee6cf7bf727
+
+# $RjtHDRSAHRPEEu4FwiwXdt
+Position: $DtBFEgmLdiXFs4xCNhckfs:1
++ [Sirenix.OdinInspector.ColumnGroupAttribute]
+
+# $8SRZmyWE6SkBYKH9wDStRv
+Position: $RjtHDRSAHRPEEu4FwiwXdt:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $RPqoQg77Ri5r65zixczrgb
+Position: $RjtHDRSAHRPEEu4FwiwXdt:1
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $DtBFEgmLdiXFs4xCNhckfs
+Position: $root:2
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Creature Sprite"
+	Alignment = Centered
+	Indent = False
+	BoldTitle = True
+
+# creature_02
+Position: $RPqoQg77Ri5r65zixczrgb:0
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
++ [Sirenix.OdinInspector.PropertySpaceAttribute]
+
+# creature_01
+Position: $8SRZmyWE6SkBYKH9wDStRv:0
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
++ [Sirenix.OdinInspector.PropertySpaceAttribute]
+
+# creature_03
+Position: $8SRZmyWE6SkBYKH9wDStRv:1
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
+
+# creature_NonSelected
+Position: $RPqoQg77Ri5r65zixczrgb:1
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
+
+# ResetCreature()
+Visibility: Hidden

@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 	public GameFlowManager gameFlowManager;
 	public ArduinoManager arduinoManager_P1;
 	public ArduinoManager arduinoManager_P2;
+	public UIManager uIManager;
 	public static GameManager Instance { get; private set; }
 
 	private void Awake()
@@ -29,6 +30,6 @@ public class GameManager : MonoBehaviour
 	
 	public void StartGame()
 	{
-		
+		uIManager.StartGame();
 	}
 }

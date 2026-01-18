@@ -1,0 +1,31 @@
+OVDF v1.1
+Creature_SpriteManager, Assembly-CSharp
+MetaGuid:beb59cdd071b92149813bee6cf7bf727
+
+# $QM4B8AwKTXxRPoLtP8HaQ5
+Position: $root:0
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Creatures Sprites"
+	Alignment = Centered
+	Indent = True
+
+# creature_01
+Position: $QM4B8AwKTXxRPoLtP8HaQ5:0
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	FilterMode = Bilinear
+	Height = 100
+
+# creature_02
+Position: $QM4B8AwKTXxRPoLtP8HaQ5:1
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
+
+# creature_03
+Position: $QM4B8AwKTXxRPoLtP8HaQ5:2
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100
+
+# creature_NonSelected
+Position: $QM4B8AwKTXxRPoLtP8HaQ5:3
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 100

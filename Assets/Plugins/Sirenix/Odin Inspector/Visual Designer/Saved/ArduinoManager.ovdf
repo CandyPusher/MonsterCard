@@ -23,3 +23,7 @@ Position: $TLAhXi1GS3MyQxciJBnYZg:1
 Visibility: Shown
 + [UnityEngine.SpaceAttribute]
 	height = 5
+
+# playerIndex
++ [Sirenix.OdinInspector.PropertySpaceAttribute]
+	SpaceAfter = 8

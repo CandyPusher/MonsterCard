@@ -1,19 +1,27 @@
 using System;
 using System.IO.Ports;
+using NUnit.Framework;
 using UnityEngine;
 
 public class ArduinoManager : MonoBehaviour
 {
 	[Header("Connessione")]
-	[SerializeField] string PORT = "COM3";
-	[SerializeField] int BAUD = 9600;
-	[SerializeField] int readingSpeed = 50;
+	[SerializeField]
+	string PORT = "COM3";
+
+	[SerializeField]
+	int BAUD = 9600;
+
+	[SerializeField]
+	int readingSpeed = 50;
 
 	[Header("Riferimenti")]
-	[SerializeField] int playerIndex = 1;
+	[SerializeField]
+	int playerIndex = 1;
 
 	private SerialPort sp;
-	
+	private bool isConnected = false;
+
 	public void DebugNoArduino(string _arduinoCtx)
 	{
 		string incomingData = _arduinoCtx.Trim();
@@ -35,34 +43,88 @@ public class ArduinoManager : MonoBehaviour
 			}
 		}
 	}
-	
+
 	public void DebugPressArduino()
 	{
 		GameManager.Instance.gameFlowManager.PlayerInteracted(playerIndex);
 	}
-	
-	private void Awake()
+
+	private string FindMyPort()
 	{
-		try
+		string[] ports = SerialPort.GetPortNames();
+
+		foreach (string port in ports)
 		{
-			sp = new SerialPort(PORT, BAUD);
-			sp.ReadTimeout = readingSpeed;
-		} catch (Exception e)
-		{
-			Debug.LogError("Errore porta seriale: " + e.Message);
+			SerialPort testPort = new SerialPort(port, BAUD);
+			testPort.ReadTimeout = 100;
+			testPort.WriteTimeout = 100;
+
+			try
+			{
+				testPort.Open();
+				testPort.DiscardInBuffer();
+
+				testPort.WriteLine("UNITY_PING");
+
+				string response = testPort.ReadLine().Trim();
+
+				if (response == "ARDUINO_PING")
+				{
+					Debug.Log($"Arduino port: {port}");
+					testPort.Close();
+					return port;
+				}
+				testPort.Close();
+			}
+			catch (Exception)
+			{
+				if (testPort.IsOpen) testPort.Close();
+			}
 		}
+		return null;
 	}
+
+	private void Awake() { }
 
 	private void Start()
 	{
-		try { sp.Open(); }
-		catch (Exception e) { Debug.LogError("Errore porta seriale: " + e.Message); }
+		// try
+		// {
+		//     sp.Open();
+		// }
+		// catch (Exception e)
+		// {
+		//     Debug.LogError("Errore porta seriale: " + e.Message);
+		// }
+		
+		string foundPort = FindMyPort();
+		
+		if (foundPort != null)
+		{
+			PORT = foundPort;
+			try
+			{
+				sp = new SerialPort(PORT, BAUD);
+				sp.ReadTimeout = readingSpeed;
+				sp.Open();
+				isConnected = true;
+				Debug.Log($"Port ({PORT}) opened");
+			}
+			catch (Exception e)
+			{
+				Debug.LogError($"Errore apertura porta trovata ({PORT}):" + e.Message);
+			}
+		}
+		else
+		{
+			Debug.LogError("Port not found");
+		}
 	}
 
 	private void Update()
 	{
-		if (sp == null || !sp.IsOpen) return;
-
+		if (!isConnected || sp == null || !sp.IsOpen)
+			return;
 		try
 		{
 			string incomingData = sp.ReadLine().Trim();
@@ -78,14 +140,19 @@ public class ArduinoManager : MonoBehaviour
 
 			if (parts.Length == 2)
 			{
-				if (int.TryParse(parts[0], out int cardID) && int.TryParse(parts[1], out int deckID))
+				if (
+					int.TryParse(parts[0], out int cardID) && int.TryParse(parts[1], out int deckID)
+				)
 				{
 					HandleInput(cardID, deckID);
 				}
 			}
 		}
 		catch (TimeoutException) { }
-		catch (Exception e) { Debug.LogWarning("Errore lettura: " + e.Message); }
+		catch (Exception e)
+		{
+			Debug.LogWarning("Errore lettura: " + e.Message);
+		}
 	}
 
 	private void HandleInput(int cardID, int deckID)
@@ -198,6 +265,7 @@ public class ArduinoManager : MonoBehaviour
 
 	private void OnApplicationQuit()
 	{
-		if (sp != null && sp.IsOpen) sp.Close();
+		if (sp != null && sp.IsOpen)
+			sp.Close();
 	}
 }
