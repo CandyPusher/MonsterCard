@@ -65,23 +65,33 @@ void setup() {
 bool isPressed = false;
 
 void loop() {
+  HandleButton();
+  HandleRFID();
+}
 
-  if (Serial.available() > 0) {
-    String msg = Serial.readStringUntil('\n');
-    msg.trim();
+void eseguiAzione(int id, int _deckTrovato) {
+  Serial.print(id);
+  Serial.print("-");
+  Serial.println(_deckTrovato);
+}
 
-    if (msg == "UNITY_PING") {
-      Serial.println("ARDUINO_PING");
-      isConnected = true;
-      return;
-    }
+bool confrontaUID(byte *uidLetto, byte *uidTarget) {
+  for (byte i = 0; i < 4; i++) {
+    if (uidLetto[i] != uidTarget[i]) return false;
   }
+  return true;
+}
 
-  if (!isConnected) {
-    return;
+void printHex(byte *buffer, byte bufferSize) {
+  for (byte i = 0; i < bufferSize; i++) {
+    Serial.print(buffer[i] < 0x10 ? " 0" : " ");
+    Serial.print(buffer[i], HEX);
   }
+  Serial.println();
+}
 
-  if (digitalRead(2) == LOW) {
+void HandleButton(){
+    if (digitalRead(2) == LOW) {
     if(!isPressed){
       Serial.println("Pressed");
       isPressed = true;
@@ -92,7 +102,10 @@ void loop() {
       isPressed = false;
     }
   }
-  if (!rfid.PICC_IsNewCardPresent()) return;
+}
+
+void HandleRFID(){
+    if (!rfid.PICC_IsNewCardPresent()) return;
   if (!rfid.PICC_ReadCardSerial()) return;
 
   int idTrovato = -1;
@@ -122,25 +135,4 @@ void loop() {
   // Stop lettura
   rfid.PICC_HaltA();
   rfid.PCD_StopCrypto1();
-}
-
-void eseguiAzione(int id, int _deckTrovato) {
-  Serial.print(id);
-  Serial.print("-");
-  Serial.println(_deckTrovato);
-}
-
-bool confrontaUID(byte *uidLetto, byte *uidTarget) {
-  for (byte i = 0; i < 4; i++) {
-    if (uidLetto[i] != uidTarget[i]) return false;
-  }
-  return true;
-}
-
-void printHex(byte *buffer, byte bufferSize) {
-  for (byte i = 0; i < bufferSize; i++) {
-    Serial.print(buffer[i] < 0x10 ? " 0" : " ");
-    Serial.print(buffer[i], HEX);
-  }
-  Serial.println();
 }

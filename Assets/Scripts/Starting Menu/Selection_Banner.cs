@@ -8,12 +8,10 @@ public class Selection_Banner : MonoBehaviour
     public void SetMyColor()
     {
         GetComponent<Image>().color = myColor;
-        Debug.Log("Strano");
     }
 
     public void SetSelectionColor()
     {
         GetComponent<Image>().color = Color.green;
-        Debug.Log("Strano");
     }
 }

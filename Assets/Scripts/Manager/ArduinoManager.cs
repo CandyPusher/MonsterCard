@@ -20,7 +20,6 @@ public class ArduinoManager : MonoBehaviour
 	int playerIndex = 1;
 
 	private SerialPort sp;
-	private bool isConnected = false;
 
 	public void DebugNoArduino(string _arduinoCtx)
 	{
@@ -49,81 +48,27 @@ public class ArduinoManager : MonoBehaviour
 		GameManager.Instance.gameFlowManager.PlayerInteracted(playerIndex);
 	}
 
-	private string FindMyPort()
+	private void Awake()
 	{
-		string[] ports = SerialPort.GetPortNames();
-
-		foreach (string port in ports)
-		{
-			SerialPort testPort = new SerialPort(port, BAUD);
-			testPort.ReadTimeout = 100;
-			testPort.WriteTimeout = 100;
-
-			try
-			{
-				testPort.Open();
-				testPort.DiscardInBuffer();
-
-				testPort.WriteLine("UNITY_PING");
-
-				string response = testPort.ReadLine().Trim();
-
-				if (response == "ARDUINO_PING")
-				{
-					Debug.Log($"Arduino port: {port}");
-					testPort.Close();
-					return port;
-				}
-				testPort.Close();
-			}
-			catch (Exception)
-			{
-				if (testPort.IsOpen) testPort.Close();
-			}
-		}
-		return null;
+		sp = new SerialPort(PORT, BAUD);
+		sp.ReadTimeout = readingSpeed;
 	}
-
-	private void Awake() { }
 
 	private void Start()
 	{
-		// try
-		// {
-		//     sp.Open();
-		// }
-		// catch (Exception e)
-		// {
-		//     Debug.LogError("Errore porta seriale: " + e.Message);
-		// }
-		
-		string foundPort = FindMyPort();
-		
-		if (foundPort != null)
+		try
 		{
-			PORT = foundPort;
-			try
-			{
-				sp = new SerialPort(PORT, BAUD);
-				sp.ReadTimeout = readingSpeed;
-				sp.Open();
-				isConnected = true;
-				Debug.Log($"Port ({PORT}) opened");
-			}
-			catch (Exception e)
-			{
-				Debug.LogError($"Errore apertura porta trovata ({PORT}):" + e.Message);
-			}
+			sp.Open();
 		}
-		else
+		catch (Exception e)
 		{
-			Debug.LogError("Port not found");
+			Debug.LogError("Errore porta seriale: " + e.Message);
 		}
 	}
 
 	private void Update()
 	{
-		if (!isConnected || sp == null || !sp.IsOpen)
+		if (sp == null || !sp.IsOpen)
 			return;
 		try
 		{

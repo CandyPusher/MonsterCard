@@ -48,6 +48,11 @@ public class GameFlowManager : MonoBehaviour
 
 	private void Player1ToggleSelection()
 	{
+		if (player1_Deck == 0)
+		{
+			return;
+		}
+
 		player1_isReady = !player1_isReady;
 
 		if (player1_isReady)
@@ -81,6 +86,11 @@ public class GameFlowManager : MonoBehaviour
 
 	private void Player2ToggleSelection()
 	{
+		if (player2_Deck == 0)
+		{
+			return;
+		}
+
 		player2_isReady = !player2_isReady;
 
 		if (player2_isReady)
@@ -119,6 +129,8 @@ public class GameFlowManager : MonoBehaviour
 			{
 				Player2ToggleSelection();
 			}
+
+			GameManager.Instance.CheckIfPlayerIsReady();
 		}
 	}
 	
@@ -127,6 +139,7 @@ public class GameFlowManager : MonoBehaviour
 	public void StartSequence()
 	{
 		setPlayerCreature();
+		GameManager.Instance.uIManager.StartGame();
 	}
 	
 	private void setPlayerCreature()

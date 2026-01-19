@@ -21,6 +21,7 @@ MonoBehaviour:
     - b836c1280583e374e9e91987d01e01df
     - 163dfa8bf66725c47a5e2efbe21e06b3
     - 8537206d03c350c4a85f9d121a120268
+    - 7e049bca2f554a740914de76fbbb522c
     values:
     - iconNameOrGuid: 
       colorIndex: 2
@@ -48,6 +49,10 @@ MonoBehaviour:
       isColorRecursive: 0
     - iconNameOrGuid: TextAsset Icon
       colorIndex: 0
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: 
+      colorIndex: 6
       isIconRecursive: 0
       isColorRecursive: 0
   bookmarks: []

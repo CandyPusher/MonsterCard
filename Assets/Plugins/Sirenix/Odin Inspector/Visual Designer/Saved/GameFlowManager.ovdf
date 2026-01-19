@@ -62,6 +62,6 @@ Position: $RDrrNeVE6Xp1PvoFUiMgav:4
 Position: $Qe6rRcJPVYE4N1FgrqtXQU:0
 Visibility: Shown
 + [Sirenix.OdinInspector.InfoBoxAttribute]
-	Message = "Current GameStat of the game"
+	Message = "Current GameState of the game"
 	GUIAlwaysEnabled = False
 	IconColor = ""
