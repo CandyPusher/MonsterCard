@@ -54,20 +54,20 @@ MonoBehaviour:
     customIcons: []
     enabled: 1
   - builtinIcons:
+    - AudioSource Icon
+    - AudioClip Icon
+    - AudioListener Icon
+    - AudioEchoFilter Icon
+    - AudioReverbZone Icon
+    customIcons: []
+    enabled: 1
+  - builtinIcons:
     - Rigidbody Icon
     - BoxCollider Icon
     - SphereCollider Icon
     - CapsuleCollider Icon
     - WheelCollider Icon
     - MeshCollider Icon
-    customIcons: []
-    enabled: 1
-  - builtinIcons:
-    - AudioSource Icon
-    - AudioClip Icon
-    - AudioListener Icon
-    - AudioEchoFilter Icon
-    - AudioReverbZone Icon
     customIcons: []
     enabled: 1
   - builtinIcons:
@@ -83,6 +83,7 @@ MonoBehaviour:
     customIcons:
     - CanvasGroup Icon
     - ProbeVolume Icon
+    - CacheServerConnected
     enabled: 1
   - builtinIcons: []
     customIcons: []

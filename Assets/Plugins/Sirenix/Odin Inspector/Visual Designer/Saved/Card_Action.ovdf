@@ -1,0 +1,15 @@
+OVDF v1.1
+Card_Action, Assembly-CSharp
+MetaGuid:4b6765630e37002439f51749d360ed58
+
+# $JjBDPgMh2Wrn4y6HyvfWwd
+Position: $root
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Actions"
+	HideWhenChildrenAreInvisible = True
+	BoldTitle = True
+	Indent = True
+
+# action
+Position: $JjBDPgMh2Wrn4y6HyvfWwd:0
+Visibility: Shown

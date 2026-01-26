@@ -1,0 +1,44 @@
+OVDF v1.1
+Card_Base, Assembly-CSharp
+MetaGuid:d14f9d87a30d9b749b6fe69169aca036
+
+# $WK8whbM7Wv662ZLKNU5wqD
+Position: $RQGZNgyxuf6uobA6Q3ZjaG:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute]
+
+# $JYup9UzUYTPxA8ahs9KBMB
+Position: $WK8whbM7Wv662ZLKNU5wqD:0
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $SAvQJJCb4QAmme8voyBrZ5
+Position: $WK8whbM7Wv662ZLKNU5wqD:1
++ [Sirenix.OdinInspector.ColumnGroupAttribute+ColumnSubGroupAttribute]
+
+# $RQGZNgyxuf6uobA6Q3ZjaG
+Position: $root:0
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+
+# card_ID
+Position: $SAvQJJCb4QAmme8voyBrZ5:0
+
+# deck_ID
+Position: $JYup9UzUYTPxA8ahs9KBMB:0
+- [UnityEngine.HeaderAttribute]
+
+# card_Image
+Position: $root:1
+- [UnityEngine.HeaderAttribute]
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 400
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
+
+# card_Name
+Position: $RQGZNgyxuf6uobA6Q3ZjaG:1
+
+# card_Description
+Position: $RQGZNgyxuf6uobA6Q3ZjaG:2
++ [UnityEngine.TextAreaAttribute]
+	minLines = 15
+
+# CardUtilities
+Visibility: Shown

@@ -1,0 +1,35 @@
+OVDF v1.1
+MonsterTypes, Assembly-CSharp
+MetaGuid:aa449e0cf2c98fe42ad2304494c1798f
+
+# $GqtBdfhMyvcbGcMLdAJZwg
+Position: $root:2
++ [Sirenix.OdinInspector.TitleGroupAttribute]
+	GroupName = "Monster Stats"
+	Indent = True
+
+# monsterImage
++ [Sirenix.OdinInspector.PreviewFieldAttribute]
+	Height = 400
++ [Sirenix.OdinInspector.AssetsOnlyAttribute]
+
+# currentHealt
+Position: $GqtBdfhMyvcbGcMLdAJZwg:0
+
+# currentShield
+Position: $GqtBdfhMyvcbGcMLdAJZwg:1
+
+# type
+Position: $GqtBdfhMyvcbGcMLdAJZwg:0
+
+# damageModifier
+Position: $GqtBdfhMyvcbGcMLdAJZwg:3
+
+# shieldModifier
+Position: $GqtBdfhMyvcbGcMLdAJZwg:4
+
+# maxHealt
+Position: $GqtBdfhMyvcbGcMLdAJZwg:1
+
+# maxShield
+Position: $GqtBdfhMyvcbGcMLdAJZwg:2

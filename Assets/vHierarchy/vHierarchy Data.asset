@@ -30,6 +30,7 @@ MonoBehaviour:
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-1886077601-0
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-89210562-0
         - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-2037017646-0
+        - globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-857657400-0
         values:
         - colorIndex: 0
           iconNameOrGuid: Canvas Icon
@@ -79,6 +80,10 @@ MonoBehaviour:
           iconNameOrGuid: Terrain Icon
           isIconRecursive: 0
           isColorRecursive: 0
+        - colorIndex: 0
+          iconNameOrGuid: CacheServerConnected
+          isIconRecursive: 0
+          isColorRecursive: 0
   bookmarks:
   - _go: {fileID: 0}
     globalId:
@@ -91,3 +96,4 @@ MonoBehaviour:
       globalObjectIdString: GlobalObjectId_V1-2-99c9720ab356a0642a771bea13969a05-89210562-0
   bookmarkedScenePaths:
   - Assets/Scenes/MainScene_01.unity
+  - Assets/Scenes/CardScene.unity
